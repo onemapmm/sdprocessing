@@ -2,6 +2,8 @@ import arcpy, os, csv
 from arcpy import env
 from arcpy.sa import *
 
+#newlinetest
+
 searchfolder = arcpy.GetParameterAsText(0)
 output_textfile = arcpy.GetParameterAsText(1)           ## set type "file" and direction to output in tool GUI parameters tab.
 
@@ -27,7 +29,7 @@ for location in searchfolder:
         found_files = []
 
     for dirpath, dirnames, filename in arcpy.da.Walk(location):
-        if dirpath.lower().endswith('.dwg'): 
+        if dirpath.lower().endswith('.dwg'):
             for item in filename:
                 found_files.append(os.path.join(dirpath, item))
     i = i+1
