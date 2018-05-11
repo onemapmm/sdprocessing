@@ -9,6 +9,9 @@ searchfolder = r"D:\OneMap_Myanmar\_SD\_01_input_data\SD_topo_vector\Zone-46_Raw
 output_textfile = r"D:\OneMap_Myanmar\_SD\_04_processing\DWG_files_listed.txt"
 correct_attributes = ["House"]
 
+
+bullllcrap = "huge pile of dump"
+
 searchfolder = searchfolder.split(";")
 arcpy.AddMessage("Selected folders to be processed:")
 
