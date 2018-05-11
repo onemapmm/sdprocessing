@@ -10,8 +10,6 @@ output_textfile = r"D:\OneMap_Myanmar\_SD\_04_processing\DWG_files_listed.txt"
 correct_attributes = ["House"]
 
 
-bullllcrap = "huge pile of dump"
-
 searchfolder = searchfolder.split(";")
 arcpy.AddMessage("Selected folders to be processed:")
 
@@ -27,6 +25,8 @@ for location in searchfolder:
     arcpy.env.overwriteOutput = True
 
     # file selection
+
+
     if i == 0:
         found_files = []
 
@@ -46,6 +46,7 @@ def attribute_values(table , field):
         return sorted({row[0] for row in cursor})
 
 #adding the subfile name to the filepath:
+
 found_attribute_values= []
 
 dictionary= {}
@@ -77,4 +78,3 @@ with open(output_textfile, 'wb') as csv_file:
             writer.writerow([key, "true", len(value), ", ".join([str(i) for i in value])])
         else:
             writer.writerow([key, "false", len(value), ", ".join([str(i) for i in value])])
-
