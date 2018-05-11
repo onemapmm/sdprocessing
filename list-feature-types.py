@@ -3,6 +3,7 @@ from arcpy import env
 from arcpy.sa import *
 
 #newlinetest
+#2ndnewlinetest
 
 searchfolder = arcpy.GetParameterAsText(0)
 output_textfile = arcpy.GetParameterAsText(1)           ## set type "file" and direction to output in tool GUI parameters tab.
