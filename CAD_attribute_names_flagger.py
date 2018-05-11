@@ -9,6 +9,7 @@ searchfolder = r"D:\OneMap_Myanmar\_SD\_01_input_data\SD_topo_vector\Zone-46_Raw
 output_textfile = r"D:\OneMap_Myanmar\_SD\_04_processing\DWG_files_listed.txt"
 correct_attributes = ["House"]
 
+
 searchfolder = searchfolder.split(";")
 arcpy.AddMessage("Selected folders to be processed:")
 
@@ -24,8 +25,6 @@ for location in searchfolder:
     arcpy.env.overwriteOutput = True
 
     # file selection
-
-#Flo sucks
 
 
     if i == 0:
@@ -45,6 +44,8 @@ for location in searchfolder:
 def attribute_values(table , field):
     with arcpy.da.SearchCursor(table, [field]) as cursor:
         return sorted({row[0] for row in cursor})
+
+#adding the subfile name to the filepath:
 
 found_attribute_values= []
 
